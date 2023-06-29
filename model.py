@@ -40,4 +40,17 @@ print('Precision:', precision)
 print('Recall:', recall)
 print('Accuracy:', accuracy)
 
-# print("Logistic Regression", score)
+
+# Plot the accuracy, precision, and recall scores
+plt.plot([1, 2, 3], [accuracy, precision, recall], 'o-')
+plt.xlabel('Metric')
+plt.ylabel('Score')
+plt.title('Model Performance')
+
+# Plot the data and the model
+plt.scatter(y_test, y_pred, c='blue', alpha=0.5)
+plt.plot([0, 1], [0, 1], 'r--')
+plt.xlabel('Actual')
+plt.ylabel('Predicted')
+plt.title('Data vs. Model')
+plt.show()
